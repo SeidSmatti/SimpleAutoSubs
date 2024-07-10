@@ -28,7 +28,7 @@ Check [CUDA Toolkit](https://developer.nvidia.com/cuda-toolkit) for installation
 
 1. Clone the repository:
     ```sh
-    git clone https://github.com/your-username/SimpleAutoSubs.git
+    git clone https://github.com/SeidSmatti/SimpleAutoSubs.git
     cd SimpleAutoSubs
     ```
 
