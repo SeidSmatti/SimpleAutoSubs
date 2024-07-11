@@ -43,6 +43,22 @@ Check [CUDA Toolkit](https://developer.nvidia.com/cuda-toolkit) for installation
     pip install -r requirements.txt
     ```
 
+4. Install tkinter
+   For Windows
+   ```sh
+   pip install tk
+   ```
+   
+   For Mac OS
+   ```sh
+   brew install python-tk
+   ```
+
+   For Linux (Debian based)
+   ```
+   sudo apt-get install python3-tk
+   ```
+
 ## Usage
 
 Run the main script:
