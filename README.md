@@ -44,6 +44,7 @@ Check [CUDA Toolkit](https://developer.nvidia.com/cuda-toolkit) for installation
     ```
 
 4. Install tkinter
+   
    For Windows
    ```sh
    pip install tk
