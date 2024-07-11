@@ -1,4 +1,3 @@
-tkinter
 customtkinter
 faster-whisper
 ffmpeg-python
