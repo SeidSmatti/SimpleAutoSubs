@@ -56,8 +56,9 @@ python main.py
 2. **Output File**: Browse and select the location to save the final video with embedded subtitles.
 3. **Model Size**: Choose the size of the Whisper model.
 4. **Use GPU**: Check this box if you want to use GPU acceleration.
-5. **Start Transcription**: Click this button to start the transcription process. (You can correct the eventual mistakes in the textbox before embedding)
-6. **Embed Subtitles**: Click this button to embed the generated subtitles into the video.
+5. **Include timecodes** : Always check the box except if you only want to use the program to get a clean transcription. (For such cases I recommend [SimpleWhisper](https://github.com/SeidSmatti/SimpleWhisper).
+6. **Start Transcription**: Click this button to start the transcription process. (You can correct the eventual mistakes in the textbox before embedding)
+7. **Embed Subtitles**: Click this button to embed the generated subtitles into the video.
 
 
 ### Logs
