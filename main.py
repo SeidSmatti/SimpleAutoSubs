@@ -116,6 +116,7 @@ gpu_var = ctk.BooleanVar()
 ctk.CTkCheckBox(frame, text="Use GPU", variable=gpu_var).grid(row=3, column=0, sticky="w", padx=5, pady=5)
 
 timecodes_var = ctk.BooleanVar()
+ctk.CTkCheckBox(frame, text="Include Timecodes", variable=timecodes_var).grid(row=3, column=1, sticky="w", padx=5, pady=5)
 
 ctk.CTkButton(frame, text="Start Transcription", command=start_transcription_thread).grid(row=4, column=0, columnspan=3, pady=10)
 
