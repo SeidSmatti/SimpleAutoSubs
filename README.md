@@ -17,7 +17,7 @@ SimpleAutoSubs was developed as part of the [LaCAS Project](https://lacas.inalco
 
 - Python 3.6 or higher
 - FFmpeg
-- CUDA Toolkit (If you want GPU acceleration)
+- CUDA Toolkit (If you want GPU acceleration), Note : as of now, faster-whisper only supports CUDA 11.x. 
 
 Check [CUDA Toolkit](https://developer.nvidia.com/cuda-toolkit) for installation instructions.
 
