@@ -4,7 +4,7 @@ import tempfile
 import time
 import customtkinter as ctk
 from tkinter import filedialog, messagebox
-from transcriber import transcribe_audio, convert_to_audio
+from transcriber import transcribe_audio, convert_to_audio, write_transcriptions_to_file
 from embedder import convert_to_srt, embed_subtitles
 
 os.environ["KMP_DUPLICATE_LIB_OK"] = "TRUE"
@@ -33,6 +33,10 @@ def start_transcription_thread():
     threading.Thread(target=start_transcription).start()
 
 # Transcription process
+# Add import for the new function
+from transcriber import transcribe_audio, convert_to_audio, write_transcriptions_to_file
+
+# Update the start_transcription function to save the transcriptions to a file
 def start_transcription():
     input_file = file_entry.get()
     model_size = model_size_var.get()
@@ -42,6 +46,11 @@ def start_transcription():
     
     if not input_file:
         messagebox.showerror("Error", "Please select an input file.")
+        return
+
+    output_file = output_entry.get()
+    if not output_file:
+        messagebox.showerror("Error", "Please select an output file.")
         return
 
     # Check if input file is video or audio
@@ -56,9 +65,13 @@ def start_transcription():
         # Transcribe audio
         transcriptions = transcribe_audio(model_size, device, audio_path, include_timecodes, log, selected_language)
 
+        # Save transcriptions to file
+        write_transcriptions_to_file(transcriptions, output_file)
+
     # Display transcription for editing
     transcription_textbox.delete("1.0", ctk.END)
     transcription_textbox.insert(ctk.END, "\n".join(transcriptions))
+
 
 # Start embedding process in a separate thread
 def start_embedding_thread():

@@ -14,7 +14,7 @@ def log(message):
         log_box.insert("end", message + "\n")
         log_box.see("end")
     else:
-        print(message)
+        print(message.encode('utf-8', errors='replace').decode('utf-8'))
 
 def load_model(model_size="base", device="cpu", compute_type="int8"):
     log("Loading the model...")
@@ -67,3 +67,8 @@ def transcribe_audio(model_size, device, audio_path, include_timecodes, log_func
     except Exception as e:
         log_func(f"An error occurred: {e}")
         return []
+
+def write_transcriptions_to_file(transcriptions, output_path):
+    with open(output_path, 'w', encoding='utf-8') as file:
+        for line in transcriptions:
+            file.write(line + '\n')
