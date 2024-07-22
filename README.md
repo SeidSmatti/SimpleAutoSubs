@@ -88,6 +88,9 @@ For more information on Whisper, faster-whisper, and CUDA:
 - [Faster Whisper](https://github.com/SYSTRAN/faster-whisper)
 - [CUDA Toolkit](https://developer.nvidia.com/cuda-toolkit)
 
+## Additions 
+- 22/07/2024 : Added manual language selection.
+
 ## License
 
 This project is licensed under the GNU General Public License. See the [LICENSE](LICENSE) file for details.
