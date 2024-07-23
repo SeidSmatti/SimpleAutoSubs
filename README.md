@@ -68,7 +68,7 @@ python main.py
 
 ### GUI Overview
 
-1. **Input File**: Browse and select the video file you want to transcribe.
+1. **Input File**: Browse and select the video file you want to transcribe. (If the file format is not supported, you can ```ffmpeg -i sourcefile.ext newfile.mp4```)
 2. **Output File**: Browse and select the location to save the final video with embedded subtitles.
 3. **Model Size**: Choose the size of the Whisper model.
 4. **Use GPU**: Check this box if you want to use GPU acceleration.
